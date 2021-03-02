@@ -48,11 +48,7 @@ export class NavigationBar extends Component<Props> {
   }
 
   handleFocusTrapDeactivate = () => {
-    const { isDialogOpen, onFocusTrapDeactivate, showNavigation } = this.props;
-
-    if (isDialogOpen) {
-      return;
-    }
+    const { onFocusTrapDeactivate, showNavigation } = this.props;
 
     // isMounted prevents reopening sidebar after navigation event
     if (showNavigation && this.isMounted) {
@@ -87,7 +83,7 @@ export class NavigationBar extends Component<Props> {
     } = this.props;
     return (
       <FocusTrap
-        active={!isDialogOpen}
+        paused={isDialogOpen}
         focusTrapOptions={{
           onDeactivate: this.handleFocusTrapDeactivate,
           clickOutsideDeactivates: true,
