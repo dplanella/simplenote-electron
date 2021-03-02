@@ -116,7 +116,10 @@ export class AppLayout extends Component<Props> {
     );
 
     return (
-      <div className={mainClasses}>
+      <div
+        className={mainClasses}
+        aria-hidden={isNavigationOpen ? true : undefined}
+      >
         <Suspense fallback={placeholder}>
           <aside
             aria-label="Notes list"
