@@ -1,6 +1,7 @@
 import React, { Component, Suspense } from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
+import FocusTrap from 'focus-trap-react';
 
 import MenuBar from '../menu-bar';
 import NoteToolbar from '../note-toolbar';
@@ -115,6 +116,8 @@ export class AppLayout extends Component<Props> {
       </TransitionDelayEnter>
     );
 
+    const hiddenByRevisions = showRevisions ? true : undefined;
+
     return (
       <div
         className={mainClasses}
@@ -122,6 +125,7 @@ export class AppLayout extends Component<Props> {
       >
         <Suspense fallback={placeholder}>
           <aside
+            aria-hidden={hiddenByRevisions}
             aria-label="Notes list"
             className="app-layout__source-column theme-color-bg theme-color-fg"
           >
@@ -135,7 +139,7 @@ export class AppLayout extends Component<Props> {
               aria-label="Note editor"
               className="app-layout__note-column theme-color-bg theme-color-fg theme-color-border"
             >
-              <NoteToolbar />
+              <NoteToolbar aria-hidden={hiddenByRevisions} />
               {showRevisions ? (
                 <NotePreview noteId={openedNote} note={openedRevision} />
               ) : (
