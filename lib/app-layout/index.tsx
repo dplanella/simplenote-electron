@@ -141,7 +141,11 @@ export class AppLayout extends Component<Props> {
             >
               <NoteToolbar aria-hidden={hiddenByRevisions} />
               {showRevisions ? (
-                <NotePreview noteId={openedNote} note={openedRevision} />
+                <NotePreview
+                  aria-hidden={hiddenByRevisions}
+                  noteId={openedNote}
+                  note={openedRevision}
+                />
               ) : (
                 <NoteEditor />
               )}
