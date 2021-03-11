@@ -22,6 +22,7 @@ $checkbox-sprite: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5
   .note-actions-panel {
     flex: none;
     border-bottom: 1px solid;
+    padding: 4px 0;
 
     &:last-child {
       border: none;
@@ -31,7 +32,8 @@ $checkbox-sprite: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5
   .note-actions-item {
     display: flex;
     align-items: center;
-    padding: 5px 10px;
+    padding: 5px 16px;
+    height: 28px;
 
     button {
       padding: 0;
@@ -42,7 +44,7 @@ $checkbox-sprite: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5
     }
 
     &:hover {
-      background-color: $studio-simplenote-blue-5;
+      background-color: $studio-gray-0;
     }
   }
 
@@ -73,7 +75,7 @@ $checkbox-sprite: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5
   }
 
   .note-actions-item-control .checkbox-control {
-    bottom: 2px;
+    bottom: 3px;
   }
 
   .note-actions-item-control .checkbox-control .checkbox-control-base,
@@ -94,16 +96,25 @@ $checkbox-sprite: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5
 }
 
 .theme-dark {
-  .note-actions-item:hover {
-    background-color: #3d3f41;
-  }
-  .note-actions-item-control .checkbox-control .checkbox-control-base,
-  .note-actions-item-control .checkbox-control .checkbox-control-checked {
-    background-position: 0 0;
+  .note-actions.theme-color-bg {
+    background-color: $studio-gray-90;
   }
 
   .note-actions-trash {
     color: $studio-red-30;
+  }
+
+  .note-actions-item-disabled {
+    color: $studio-gray-50;
+  }
+
+  .note-actions-item:hover {
+    background-color: $studio-gray-80;
+  }
+
+  .note-actions-item-control .checkbox-control .checkbox-control-base,
+  .note-actions-item-control .checkbox-control .checkbox-control-checked {
+    background-position: 0 0;
   }
 
   .note-actions-item-control .checkbox-control .checkbox-control-checked {
