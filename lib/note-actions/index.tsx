@@ -137,7 +137,11 @@ export class NoteActions extends Component<Props> {
               </div>
             )}
             {hasRevisions || (
-              <div className="note-actions-item">History (unavailable)</div>
+              <div className="note-actions-item note-actions-item-disabled">
+                <span className="note-actions-disabled">
+                  History (unavailable)
+                </span>
+              </div>
             )}
           </div>
           <div className="note-actions-panel note-actions-public-link theme-color-border">

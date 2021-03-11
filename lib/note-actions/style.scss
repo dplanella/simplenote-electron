@@ -46,6 +46,7 @@ $checkbox-sprite: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5
   }
 
   .note-actions-item-disabled {
+    color: $studio-gray-5;
     &:hover {
       background-color: transparent;
     }
@@ -59,13 +60,6 @@ $checkbox-sprite: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5
     flex: none;
     width: 44px;
     text-align: right;
-  }
-
-  .note-actions-public-link,
-  .note-actions-internal-link {
-    .note-actions-disabled {
-      color: $studio-gray-5;
-    }
   }
 
   .note-actions-internal-link .note-actions-name {
