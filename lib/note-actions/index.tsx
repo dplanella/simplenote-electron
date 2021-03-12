@@ -7,6 +7,7 @@ import { includes, isEmpty } from 'lodash';
 import ClipboardButton from '../components/clipboard-button';
 import CheckboxControl from '../controls/checkbox';
 import getNoteTitleAndPreview from '../utils/note-utils';
+import Spinner from '../components/spinner';
 
 import actions from '../state/actions';
 
@@ -173,6 +174,11 @@ export class NoteActions extends Component<Props> {
                   text={publishURL}
                   linkText="Copy Link"
                 />
+              ) : isPublished && !publishURL ? (
+                <>
+                  <span className="note-actions-disabled">Copy Link</span>
+                  <Spinner isWhite={false} size={20} thickness={5} />
+                </>
               ) : (
                 <span className="note-actions-disabled">Copy Link</span>
               )}

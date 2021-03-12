@@ -93,9 +93,19 @@ $checkbox-sprite: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5
     background-color: transparent;
     background-position: -18px -18px;
   }
+
+  .spinner {
+    margin-left: 10px;
+  }
+  .spinner__circle {
+    color: $studio-gray-80;
+  }
 }
 
 .theme-dark {
+  .spinner__circle {
+    color: $studio-white;
+  }
   .note-actions.theme-color-bg {
     background-color: $studio-gray-90;
   }
