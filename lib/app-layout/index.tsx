@@ -1,7 +1,6 @@
 import React, { Component, Suspense } from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
-import FocusTrap from 'focus-trap-react';
 
 import MenuBar from '../menu-bar';
 import NoteToolbar from '../note-toolbar';
