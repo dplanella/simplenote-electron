@@ -1127,12 +1127,10 @@ class NoteContentEditor extends Component<Props> {
     }
     const range = this.matchesInNote[index].range;
     this.editor.setSelection(range);
-
     this.editor.revealLineInCenter(range.startLineNumber);
     this.focusEditor();
 
     const newDecorations = [];
-
     this.matchesInNote.forEach((match) => {
       let decoration = {};
       if (match.range === range) {
